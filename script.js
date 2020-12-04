@@ -122,7 +122,7 @@ function displayPopup(statusFlag, answer){
 	  console.log("doing correcty things");
     $(".popup-box img").attr("src","https://raw.githubusercontent.com/zachgold1997/2020-Car-Quiz/main/check-icon.png");
     $(".popup-box #popup-text .answer-header").text('You are right!');
-    $('.popupo-box .correct-answer').hide();
+    $('.popup-box .correct-answer').hide();
     $(".popup-box").show();
   }
   else{
