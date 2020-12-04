@@ -121,8 +121,8 @@ function displayPopup(statusFlag, answer){
   if(statusFlag){
 	  console.log("doing correcty things");
     $(".popup-box img").attr("src","https://raw.githubusercontent.com/zachgold1997/2020-Car-Quiz/main/check-icon.png");
-	$(".popup-box #popup-text .answer-header").text('You are right!');
-	$('.popupo-box .correct-answer').hide();
+    $(".popup-box #popup-text .answer-header").text('You are right!');
+    $('.popupo-box .correct-answer').hide();
     $(".popup-box").show();
   }
   else{
@@ -135,8 +135,9 @@ function displayPopup(statusFlag, answer){
        }
       else{
          $(".popup-box img").attr("src","https://raw.githubusercontent.com/zachgold1997/2020-Car-Quiz/main/red-x-icon.png");
-        $(".popup-box #popup-text .answer-header").text('Sorry, the correct answer was:');
+	 $(".popup-box #popup-text .answer-header").text('Sorry, the correct answer was:');
          $('.popup-box .correct-answer').text(answer).show();
+	 $('.popupo-box .correct-answer').hide();
       }
     }
      $(".popup-box").show();
