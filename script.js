@@ -118,18 +118,18 @@ function displayPopup(statusFlag, answer){
   $('.feedback-section').show();
   // $('.quiz-box').fadeIn();
   if(statusFlag){
-    $(".popup-box img").attr("src","https://github.com/zachgold1997/2020-Car-Quiz/blob/main/check-icon.png");
+    $(".popup-box img").attr("src","https://raw.githubusercontent.com/zachgold1997/2020-Car-Quiz/main/check-icon.png");
     $(".popup-box #popup-text").text("You are right!");
     $(".popup-box").show();
   }
   else{
       if(answer === undefined) {
          questionCounter--;
-         $(".popup-box img").attr("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa7WP9E3LDA10kP2Rk2enw-_kjI-iJd4kny8yH2kTrPR8hgrwtBg");
+         $(".popup-box img").attr("src","https://raw.githubusercontent.com/zachgold1997/2020-Car-Quiz/main/red-x-icon.png");
          $(".popup-box #popup-text").text('Please select an option');
        }
       else{
-         $(".popup-box img").attr("src","https://github.com/zachgold1997/2020-Car-Quiz/blob/main/red-x-icon.png");
+         $(".popup-box img").attr("src","htthttps://raw.githubusercontent.com/zachgold1997/2020-Car-Quiz/main/red-x-icon.png");
         $(".popup-box #popup-text .answer-header").text('Sorry, the correct answer was:');
          $('.popup-box .correct-answer').text(answer).show();
       }
