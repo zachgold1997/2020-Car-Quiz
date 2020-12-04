@@ -137,7 +137,7 @@ function displayPopup(statusFlag, answer){
          $(".popup-box img").attr("src","https://raw.githubusercontent.com/zachgold1997/2020-Car-Quiz/main/red-x-icon.png");
 	 $(".popup-box #popup-text .answer-header").text('Sorry, the correct answer was:');
          $('.popup-box .correct-answer').text(answer).show();
-	 $('.popup-box .correct-answer').hide();
+	 //$('.popup-box .correct-answer').hide();
       }
     }
      $(".popup-box").show();
