@@ -130,7 +130,8 @@ function displayPopup(statusFlag, answer){
       if(answer === undefined) {
          questionCounter--;
          $(".popup-box img").attr("src","https://raw.githubusercontent.com/zachgold1997/2020-Car-Quiz/main/red-x-icon.png");
-         $(".popup-box #popup-text").text('Please select an option');
+         $(".popup-box #popup-text .answer-header").text('Please select an option');
+	 $('.popupo-box .correct-answer').hide();
        }
       else{
          $(".popup-box img").attr("src","https://raw.githubusercontent.com/zachgold1997/2020-Car-Quiz/main/red-x-icon.png");
