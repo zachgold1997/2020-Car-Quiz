@@ -115,14 +115,16 @@ function checkAnswer(selected){
 
 //This function gives feedback to the user whether the option selected in correct or wrong. It also alerts the user if no option is selected
 function displayPopup(statusFlag, answer){
+	console.log("correct?" + statusFlag);
   $('.feedback-section').show();
   // $('.quiz-box').fadeIn();
   if(statusFlag){
+	  console.log("doing correcty things");
     $(".popup-box img").attr("src","https://raw.githubusercontent.com/zachgold1997/2020-Car-Quiz/main/check-icon.png");
-    $(".popup-box #popup-text").text("You are right!");
     $(".popup-box").show();
   }
   else{
+	  console.log("doing wrongy things");
       if(answer === undefined) {
          questionCounter--;
          $(".popup-box img").attr("src","https://raw.githubusercontent.com/zachgold1997/2020-Car-Quiz/main/red-x-icon.png");
