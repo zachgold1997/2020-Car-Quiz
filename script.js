@@ -1,5 +1,3 @@
-let questionCounter = 0;
-let score = 0;
 let questionsArray = [
   {
     question: "1. Chrysler brought back what comapany as an EV in 2020?",
@@ -32,16 +30,18 @@ let questionsArray = [
     optionthree: "$50,000",
     optionfour: "$75,000",
     correctAnswer: "$69,420"
-  }
-  ];
-questionsArray.push({
-     question: "5. Chevrolet revoliutionized the C8 corvette in 2020 with what major change?",
+  },
+  {
+    question: "5. Chevrolet revoliutionized the C8 corvette in 2020 with what major change?",
     optionone: "3 seats",
     optiontwo: "Only sold in the U.S.A.",
     optionthree: "Mid-engine",
     optionfour: "Electric motors",
     correctAnswer: "Mid-engine"
-  });
+  },
+    score: 0,
+    questionCounter: 0];
+
 let questionsCount = questionsArray.length;
 
 function handleStartClick(){
