@@ -70,17 +70,31 @@ function renderQuestionCount(){
 }
 
 // This function renders a new question
-function renderQuestion(){
-  $(".questions-form p").text(questionsArray[questionCounter].question);
-  $(".questions-form #option-one").val(questionsArray[questionCounter].optionone);
-  $(".questions-form #option-two").val(questionsArray[questionCounter].optiontwo);
-  $(".questions-form #option-three").val(questionsArray[questionCounter].optionthree);
-  $(".questions-form #option-four").val(questionsArray[questionCounter].optionfour);
-   
-  $(".questions-form #option-one").next().text(questionsArray[questionCounter].optionone);
-  $(".questions-form #option-two").next().text(questionsArray[questionCounter].optiontwo);
-  $(".questions-form #option-three").next().text(questionsArray[questionCounter].optionthree);
-  $(".questions-form #option-four").next().text(questionsArray[questionCounter].optionfour);
+function renderQuestion(counter){
+let html_question = "<div>"+score+"</div>
+                    "<div>"+position+"</div>
+<form class="questions-form">
+				  <p>"+questionsArray[counter].question+"</p>
+				  <label class="options">
+				    <input  id="option-one" type="radio" name="option-one">
+				    <span>questionsArray[counter].optionone</span>
+				  </label>
+				   <label class="options">
+				    <input id="option-two" type="radio" name="option-one">
+				    <span>questionsArray[counter].optiontwo</span>
+				  </label>
+				   <label class="options">
+				    <input id="option-three" type="radio" name="option-one">
+				    <span></span>
+				  </label>
+				   <label class="options">
+				    <input id="option-four" type="radio" name="option-one">
+				    <span></span>
+				  </label>
+				  <input type="button" value="Submit Answer" class="submit-button js-submit-button">
+			  </form>	";
+  
+  $(".quiz_box").text(html_question)
 }
 
 function handleSubmitAnswer(){
@@ -97,7 +111,6 @@ function handleSubmitAnswer(){
     }
  });
 }
-
 
 // This function checks whether the answer selected by the user is correct or not
 function checkAnswer(selected){
