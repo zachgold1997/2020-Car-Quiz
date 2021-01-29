@@ -72,7 +72,7 @@ function renderQuestionCount(){
 
 // This function renders a new question
 function renderQuestion(counter){
-let html_question = "<div>"+score+"</div>
+let html_question = "<div>"+score+</div>
                     "<div>"+position+"</div>
 <form class="questions-form">
 				  <p>"+questionsArray[counter].question+"</p>
