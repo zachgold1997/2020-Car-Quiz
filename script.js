@@ -39,7 +39,7 @@ let questionsArray = [
     optionfour: "Electric motors",
     correctAnswer: "Mid-engine"
   },
-    score: 0,
+    score: "0",
     questionCounter: 0];
 
 let questionsCount = questionsArray.length;
