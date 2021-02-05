@@ -59,9 +59,9 @@ function handleStartClick(){
 
 // This function displays the quiz box with the question, options, score and question count
 function renderQuizBox(){
-  renderQuestionCount();
-  renderQuestion();
-  renderScore();
+  //renderQuestionCount();
+  renderQuestion(0);
+  //renderScore();
 }
 function renderScore(){
   $(".progress-section .score-card").text(`${score}/${questionsCount}`);
