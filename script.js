@@ -72,11 +72,7 @@ function renderQuestionCount(){
 
 // This function renders a new question
 function renderQuestion(counter){
-let html_question = "<div>"+score+"</div><div>"+position+"</div><form class=\"questions-form\"><p>"+questionsArray[counter].question+"</p><label class=\"options\">
-<input  id=\"option-one\" type=\"radio\" name=\"option-one\"><span>"+questionsArray[counter].optionone+"</span></label><label class=\"options\">
-<input id=\"option-two\" type=\"radio\" name=\"option-one\"><span>"+questionsArray[counter].optiontwo+"</span></label><label class=\"options\">
-<input id=\"option-three\" type=\"radio\" name=\"option-one\"><span></span></label><label class=\"options\"><input id=\"option-four\" type=\"radio\" name=\"option-one\">
-<span></span></label><input type=\"button\" value=\"Submit Answer\" class=\"submit-button js-submit-button\"></form>";
+let html_question = "<div>"+score+"</div><div>"+position+"</div><form class=\"questions-form\"><p>"+questionsArray[counter].question+"</p><label class=\"options\"><input  id=\"option-one\" type=\"radio\" name=\"option-one\"><span>"+questionsArray[counter].optionone+"</span></label><label class=\"options\"><input id=\"option-two\" type=\"radio\" name=\"option-one\"><span>"+questionsArray[counter].optiontwo+"</span></label><label class=\"options\"><input id=\"option-three\" type=\"radio\" name=\"option-one\"><span></span></label><label class=\"options\"><input id=\"option-four\" type=\"radio\" name=\"option-one\"><span></span></label><input type=\"button\" value=\"Submit Answer\" class=\"submit-button js-submit-button\"></form>";
   
   $(".quiz_box").text(html_question)
 }
