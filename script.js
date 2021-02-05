@@ -48,10 +48,6 @@ let questionsCount = questionsArray.length;
 function handleStartClick(){
 	$('.js-start-button').on('click',function(event){
 		console.log("handleStartClick() ran");
-		$('.progress-section').show();
-		$('.start-section').hide();
-		$('.end-section').hide();
-		$('.quiz-box').fadeIn("slow");
 		renderQuizBox(); 
 
 	});
