@@ -60,7 +60,7 @@ function handleStartClick(){
 // This function displays the quiz box with the question, options, score and question count
 function renderQuizBox(){
   renderQuestionCount();
-  renderQuestion();
+  renderQuestion(0);
   renderScore();
 }
 function renderScore(){
