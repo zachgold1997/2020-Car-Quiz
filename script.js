@@ -69,7 +69,7 @@ function renderQuestionCount(){
 function renderQuestion(counter){
 	
 let html_question = "<div class=\"score_count\">Score:"+questionsArray[5].score+"</div><div class=\"score_count\">Question Number:"+questionsArray[5].questionCounter+"</div><form class=\"questions-form\"><p>"+questionsArray[counter].question+"</p><label class=\"options\"><input  id=\"option-one\" type=\"radio\" name=\"option-one\"><span>"+questionsArray[counter].optionone+"</span></label><label class=\"options\"><input id=\"option-two\" type=\"radio\" name=\"option-two\"><span>"+questionsArray[counter].optiontwo+"</span></label><label class=\"options\"><input id=\"option-three\" type=\"radio\" name=\"option-three\"><span>"+questionsArray[counter].optionthree+"</span></label><label class=\"options\"><input id=\"option-four\" type=\"radio\" name=\"option-four\"><span>"+questionsArray[counter].optionfour+"</span></label><input type=\"button\" value=\"Submit Answer\" class=\"submit-button js-submit-button\"></form>";
-  console.log(html_question);
+  //console.log(html_question);
   $(".quiz-box").html(html_question)
 }
 
