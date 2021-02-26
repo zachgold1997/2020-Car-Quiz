@@ -157,5 +157,7 @@
  }
  .score_count{
    border:2px solid black;
-   color: gray;
+   color: black;
+   width: 30%;
+   margin: 5px;
  }
