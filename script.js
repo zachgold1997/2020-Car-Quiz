@@ -100,7 +100,7 @@ function checkAnswer(selected){
 	renderQuestion(questionCounter);
   } 
   else{
-	  questionCounter++:
+	  questionCounter++;
    displayPopup(false, rightAnswer);
    renderQuestion(questionCounter);
   }
