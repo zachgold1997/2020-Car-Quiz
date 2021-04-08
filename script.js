@@ -46,7 +46,8 @@ let questionsArray = [
 let questionsCount = questionsArray.length;
 
 function handleStartClick(){
-	$('.js-start-button').on('click',function(event){		
+	$('.js-start-button').on('click',function(event){
+		$(".start-section").addClass(".hide");
 		renderQuizBox(); 
 
 	});
@@ -65,7 +66,6 @@ function renderQuestionCount(){
   $(".progress-section .question-count").text(`Question ${questionCounter+1} of ${questionsCount}`);
 }
 
-// This function renders a new question
 function renderQuestion(counter){
 	
 let html_question = "<div class=\"score_count\">Score:"+questionsArray[5].score+"</div><div class=\"score_count\">Question Number:"+questionsArray[5].questionCounter+"</div><form class=\"questions-form\"><p>"+questionsArray[counter].question+"</p><label class=\"options\"><input  id=\"option-one\" type=\"radio\" name=\"option-one\"><span>"+questionsArray[counter].optionone+"</span></label><label class=\"options\"><input id=\"option-two\" type=\"radio\" name=\"option-two\"><span>"+questionsArray[counter].optiontwo+"</span></label><label class=\"options\"><input id=\"option-three\" type=\"radio\" name=\"option-three\"><span>"+questionsArray[counter].optionthree+"</span></label><label class=\"options\"><input id=\"option-four\" type=\"radio\" name=\"option-four\"><span>"+questionsArray[counter].optionfour+"</span></label><input type=\"button\" value=\"Submit Answer\" class=\"submit-button js-submit-button\"></form>";
