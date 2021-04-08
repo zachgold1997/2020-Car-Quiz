@@ -73,6 +73,8 @@ let html_question = "<div class=\"score_count\">Score:"+questionsArray[5].score+
   $(".quiz-box").html(html_question)
 }
 
+handleSubmitAnswer();
+
 function handleSubmitAnswer(){
   $('.js-submit-button').on('click',function(event){
     console.log("handleSubmitAnswer() ran");
