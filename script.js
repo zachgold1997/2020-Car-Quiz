@@ -186,7 +186,7 @@ function init(){
   //$('.quiz-box').hide();
   $('.feedback-section').hide();
   handleStartClick();
-  handleSubmitAnswer();
+  //handleSubmitAnswer();
   handlePopupClose();
   handleStartOver()
 }
