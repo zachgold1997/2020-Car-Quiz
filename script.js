@@ -73,9 +73,7 @@ let html_question = "<div class=\"score_count\">Score:"+questionsArray[5].score+
   $(".quiz-box").html(html_question)
 }
 
-handleSubmitAnswer();
-
-function handleSubmitAnswer(){
+//function handleSubmitAnswer(){
   $('.js-submit-button').on('click',function(event){
     console.log("handleSubmitAnswer() ran");
    let selectedOption = $('input[type=radio]:checked').val();
@@ -88,7 +86,7 @@ function handleSubmitAnswer(){
       checkAnswer(selectedOption);
     }
  });
-}
+//}
 
 // This function checks whether the answer selected by the user is correct or not
 function checkAnswer(selected){
