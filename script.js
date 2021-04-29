@@ -68,13 +68,14 @@ function renderQuestionCount(){
 
 function renderQuestion(counter){
 	
-let html_question = "<div class=\"score_count\">Score:"+questionsArray[5].score+"</div><div class=\"score_count\">Question Number:"+questionsArray[5].questionCounter+"</div><form class=\"questions-form\"><p>"+questionsArray[counter].question+"</p><label class=\"options\"><input  id=\"option-one\" type=\"radio\" name=\"option-one\"><span>"+questionsArray[counter].optionone+"</span></label><label class=\"options\"><input id=\"option-two\" type=\"radio\" name=\"option-two\"><span>"+questionsArray[counter].optiontwo+"</span></label><label class=\"options\"><input id=\"option-three\" type=\"radio\" name=\"option-three\"><span>"+questionsArray[counter].optionthree+"</span></label><label class=\"options\"><input id=\"option-four\" type=\"radio\" name=\"option-four\"><span>"+questionsArray[counter].optionfour+"</span></label><input type=\"button\" value=\"Submit Answer\" class=\"submit-button js-submit-button\"></form>";
+let html_question = "<div class=\"score_count\">Score:"+questionsArray[5].score+"</div><div class=\"score_count\">Question Number:"+questionsArray[5].questionCounter+"</div><form class=\"questions-form\"><p>"+questionsArray[counter].question+"</p><label class=\"options\"><input  id=\"option-one\" type=\"radio\" name=\"option\" value=\"option-one\"><span>"+questionsArray[counter].optionone+"</span></label><label class=\"options\"><input id=\"option-two\" type=\"radio\" name=\"option\" value=\"option-two\"><span>"+questionsArray[counter].optiontwo+"</span></label><label class=\"options\"><input id=\"option-three\" type=\"radio\" name=\"option-one\"><span>"+questionsArray[counter].optionthree+"</span></label><label class=\"options\"><input id=\"option-four\" type=\"radio\" name=\"option-one\"><span>"+questionsArray[counter].optionfour+"</span></label><button type=\"submit\" value=\"Submit Answer\" class=\"submit-button js-submit-button\">Submit Answer</button></form>";
   //console.log(html_question);
   $(".quiz-box").html(html_question)
 }
 
-function handleSubmitAnswer(){
-  $('.js-submit-button').on('click',function(event){
+//function handleSubmitAnswer(){
+  $('.quiz-box').on('submit',function(event){
+	   event.preventDefault();
     console.log("handleSubmitAnswer() ran");
    let selectedOption = $('input[type=radio]:checked').val();
    console.log("selectedOption :"+selectedOption);
@@ -86,7 +87,7 @@ function handleSubmitAnswer(){
       checkAnswer(selectedOption);
     }
  });
-}
+//}
 
 // This function checks whether the answer selected by the user is correct or not
 function checkAnswer(selected){
