@@ -95,12 +95,13 @@ function handleSubmitAnswer(){
 // This function checks whether the answer selected by the user is correct or not
 function checkAnswer(selected){
   console.log("selected "+selected);
+	console.log(questionsArray[5].questionCounter);
   let rightAnswer = questionsArray[questionsArray[5].questionCounter].correctAnswer;
   
   if(selected === rightAnswer){
     score++;
 	questionsArray[5].questionCounter++;
-	  consol.log(questionsArray[5].questionCounter++);
+	  consol.log(questionsArray[5].questionCounter);
     displayPopup(true, rightAnswer);
 	renderQuestion(questionsArray[5].questionCounter);
   } 
