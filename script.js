@@ -41,7 +41,10 @@ let questionsArray = [
   },
   {
     score: 0,
-    questionCounter: 1}];
+    questionCounter: 1}
+];
+	
+	
 
 let questionsCount = questionsArray.length;
 
@@ -73,7 +76,7 @@ let html_question = "<div class=\"score_count\">Score:"+questionsArray[5].score+
   $(".quiz-box").html(html_question)
 }
 
-//function handleSubmitAnswer(){
+function handleSubmitAnswer(){
   $('.quiz-box').on('submit',function(event){
 	   event.preventDefault();
     console.log("handleSubmitAnswer() ran");
@@ -87,23 +90,23 @@ let html_question = "<div class=\"score_count\">Score:"+questionsArray[5].score+
       checkAnswer(selectedOption);
     }
  });
-//}
+}
 
 // This function checks whether the answer selected by the user is correct or not
 function checkAnswer(selected){
   console.log("selected "+selected);
-  let rightAnswer = questionsArray[questionCounter].correctAnswer;
+  let rightAnswer = questionsArray[questionsArray[5].questionCounter].correctAnswer;
   
   if(selected === rightAnswer){
     score++;
-	questionCounter++;
+	questionsArray[5].questionCounter++;
     displayPopup(true, rightAnswer);
-	renderQuestion(questionCounter);
+	renderQuestion(questionsArray[5].questionCounter);
   } 
   else{
-	  questionCounter++;
+	  questionsArray[5].questionCounter++;
    displayPopup(false, rightAnswer);
-   renderQuestion(questionCounter);
+   renderQuestion(questionsArray[5].questionCounter);
   }
 }
 
@@ -187,7 +190,7 @@ function init(){
   //$('.quiz-box').hide();
   $('.feedback-section').hide();
   handleStartClick();
-  //handleSubmitAnswer();
+  handleSubmitAnswer();
   handlePopupClose();
   handleStartOver()
 }
