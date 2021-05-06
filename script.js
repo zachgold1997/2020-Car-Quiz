@@ -182,7 +182,7 @@ function handleStartOver(){
   
     $('.end-section').hide();
     $('.quiz-box').fadeIn();
-    renderQuizBox();
+   // renderQuizBox();
   });
 }
 
