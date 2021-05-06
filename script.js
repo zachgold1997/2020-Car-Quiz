@@ -100,6 +100,7 @@ function checkAnswer(selected){
   if(selected === rightAnswer){
     score++;
 	questionsArray[5].questionCounter++;
+	  consol.log(questionsArray[5].questionCounter++);
     displayPopup(true, rightAnswer);
 	renderQuestion(questionsArray[5].questionCounter);
   } 
