@@ -41,7 +41,7 @@ let questionsArray = [
   },
   {
     score: 0,
-    questionCounter: 1}
+    questionCounter: 0}
 ];
 	
 	
